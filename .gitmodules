@@ -10,3 +10,9 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/php-whitespace"]
+	path = bundle/php-whitespace
+	url = https://github.com/scrooloose/whitespace2.0.vim.git
