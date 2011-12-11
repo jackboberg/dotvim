@@ -13,9 +13,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "bundle/php-whitespace"]
-	path = bundle/php-whitespace
-	url = https://github.com/scrooloose/whitespace2.0.vim.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
