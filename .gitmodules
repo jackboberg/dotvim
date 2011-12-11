@@ -16,3 +16,9 @@
 [submodule "bundle/php-whitespace"]
 	path = bundle/php-whitespace
 	url = https://github.com/scrooloose/whitespace2.0.vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/vim-scripts/delimitMate.vim.git

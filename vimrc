@@ -5,6 +5,7 @@ set nocompatible
 " initialize pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
+Helptags
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
