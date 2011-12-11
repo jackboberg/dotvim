@@ -1,11 +1,9 @@
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible    " Use Vim defaults
 
-" initialize pathogen
+" init pathogen, build help files
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
-Helptags
+call pathogen#helptags()
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -37,17 +35,17 @@ endif " has("autocmd")
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" In many terminal emulators the mouse works just fine, thus enable it.
+" you have a mouse, right?
 if has('mouse')
   set mouse=a
 endif
 
+" tabs -> spaces
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-let mapleader = ","
 set wildmode=list:longest
 set title
 set hidden
@@ -55,13 +53,19 @@ set hidden
 set backupdir=~/.vim_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-map <leader>w :NERDTreeToggle<CR>
-
 set t_Co=256
 set nu
 set clipboard=unnamed
 set nofoldenable
 
-syntax enable
+let mapleader = ","
+
+" add style
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
 set background=dark
 colorscheme solarized
+
+map <leader>w :NERDTreeToggle<CR>
