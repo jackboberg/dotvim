@@ -2,6 +2,10 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" initialize pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
