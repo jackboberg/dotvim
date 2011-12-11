@@ -42,13 +42,6 @@ if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -69,4 +62,6 @@ set nu
 set clipboard=unnamed
 set nofoldenable
 
+syntax enable
+set background=dark
 colorscheme solarized
