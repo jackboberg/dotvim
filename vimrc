@@ -33,7 +33,7 @@ else
 endif " has("autocmd")
 
 set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set incsearch	" do incremental searching
 
 " you have a mouse, right?
 if has('mouse')
@@ -47,18 +47,18 @@ set shiftwidth=4
 set softtabstop=4
 
 set wildmode=list:longest
-set title
+set title   "term title
 set hidden
 
 set backupdir=~/.vim_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim_tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 set t_Co=256
-set nu
+set nu  " line numbers
 set clipboard=unnamed
 set nofoldenable
-
-let mapleader = ","
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 " add style
 if &t_Co > 2 || has("gui_running")
@@ -68,4 +68,7 @@ endif
 set background=dark
 colorscheme solarized
 
+" map keys for personal taste
+let mapleader = ","
 map <leader>w :NERDTreeToggle<CR>
+nnoremap <leader><space> :noh<CR>
