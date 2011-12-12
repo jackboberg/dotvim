@@ -72,3 +72,5 @@ colorscheme solarized
 let mapleader = ","
 map <leader>w :NERDTreeToggle<CR>
 nnoremap <leader><space> :noh<CR>
+"Markdown to HTML
+nmap <leader>md :%! markdown --html4tags <CR>  
