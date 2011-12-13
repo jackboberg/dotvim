@@ -68,6 +68,12 @@ endif
 set background=dark
 colorscheme solarized
 
+" setup UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "MY_UltiSnips"]
+
 " map keys for personal taste
 let mapleader = ","
 map <leader>w :NERDTreeToggle<CR>
