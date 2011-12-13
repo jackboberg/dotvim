@@ -37,3 +37,6 @@
 [submodule "bundle/UltiSnips"]
 	path = bundle/UltiSnips
 	url = git://github.com/vim-scripts/UltiSnips.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = git://github.com/bingaman/vim-sparkup.git
