@@ -72,7 +72,7 @@ colorscheme solarized
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "MY_UltiSnips"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 
 " map keys for personal taste
 let mapleader = ","
