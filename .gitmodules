@@ -1,39 +1,39 @@
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
-	url = https://github.com/tpope/vim-pathogen.git
+	url = git://github.com/tpope/vim-pathogen.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+	url = git://github.com/scrooloose/syntastic.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
+	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
-	url = https://github.com/vim-scripts/delimitMate.vim.git
+	url = git://github.com/vim-scripts/delimitMate.vim.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
-	url = https://github.com/tpope/vim-markdown.git
+	url = git://github.com/tpope/vim-markdown.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/repeat"]
 	path = bundle/repeat
-	url = https://github.com/tpope/vim-repeat.git
+	url = git://github.com/tpope/vim-repeat.git
 [submodule "bundle/surround"]
 	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git://github.com/tpope/vim-surround.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
+	url = git://github.com/godlygeek/tabular.git
 [submodule "bundle/UltiSnips"]
 	path = bundle/UltiSnips
 	url = git://github.com/vim-scripts/UltiSnips.git
