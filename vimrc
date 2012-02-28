@@ -16,7 +16,7 @@ call pathogen#helptags()
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " column-width and text wrapping
-set textwidth=72
+"set textwidth=72
 
 " better paragraph formatting
 set formatprg=par\ -eq
@@ -64,7 +64,17 @@ set incsearch	" do incremental searching
 set background=dark
 colorscheme solarized
 
-set rnu  " relative line numbers
+" relative line numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <leader>l :call NumberToggle()<cr>
+set relativenumber 
 
 
 " --------------------------------------------------------------------
@@ -86,9 +96,33 @@ nmap <leader>md :%! markdown --html4tags <CR>
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_us
 
-
 "let g:syntastic_enable_balloons = 1
 
+" Load .vimrc in split window
+map <leader>v :vs $MYVIMRC<CR><C-W>_
+
+" Reselect visual block after indent/outdent
+"vnoremap < <gv
+"vnoremap > >gv
+
+" Easy split navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+inoremap <S-S> <esc>
+" select all
+map <Leader>a ggVG
+
+" --------------------------------------------------------------------
+" buffer keys
+
+" Switch back to last file in buffer
+nmap <leader><leader> :b#<cr>
+" use arrow keys to cycle thru buffer
+noremap <left> :bp<CR>
+noremap <right> :bn<CR>
 
 " --------------------------------------------------------------------
 " Only do this part when compiled with support for autocommands.
@@ -107,8 +141,6 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
-  augroup END
-
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
@@ -122,11 +154,22 @@ if has("autocmd")
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 
+  " Show Git diff in window split when commiting
+  autocmd FileType gitcommit DiffGitCached
+
+  " re-source .vimrc when saved
+  autocmd BufWritePost .vimrc so ~/.vimrc
+
+  autocmd BufEnter * setlocal cursorline
+  autocmd BufEnter * setlocal colorcolumn=73
+  autocmd BufLeave * setlocal nocursorline
+  autocmd BufLeave * setlocal colorcolumn=0
+
+  augroup END
 else
 
   " always set autoindenting on
   set autoindent
 
 endif " has("autocmd")
-
 
