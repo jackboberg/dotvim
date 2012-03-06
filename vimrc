@@ -111,7 +111,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-inoremap <S-S> <esc>
 " select all
 map <Leader>a ggVG
 
