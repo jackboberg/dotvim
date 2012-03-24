@@ -29,19 +29,6 @@ do
 while (${1:/* condition */});"
 endsnippet
 
-snippet doc_f "doc_f" !
-/**
- * $2
- *
- * @access  $1
- * @param   $3
- * @return  ${4:void}
- **/
-${1:public }function ${2:someFunc}(${3})
-{
-    ${6}
-}
-endsnippet
 
 snippet for "for" !
 for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
@@ -94,4 +81,173 @@ print_r(${1:variable});
 exit;
 endsnippet
 
+
+
+snippet php
+	<?php
+	${1}
+	?>
+endsnippet
+snippet ec
+	echo "${1:string}"${2};
+endsnippet
+snippet inc
+	include '${1:file}';${2}
+endsnippet
+snippet inc1
+	include_once '${1:file}';${2}
+endsnippet
+snippet req
+	require '${1:file}';${2}
+endsnippet
+snippet req1
+	require_once '${1:file}';${2}
+endsnippet
+
+# $GLOBALS['...']
+snippet globals
+	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
+endsnippet
+#snippet $_ "COOKIE['...']""
+#	$_COOKIE['${1:variable}']${2}
+#endsnippet
+#snippet $_ "ENV['...']"
+#	$_ENV['${1:variable}']${2}
+#endsnippet
+#snippet $_ "FILES['...']"
+#	$_FILES['${1:variable}']${2}
+#endsnippet
+#snippet $_ "Get['...'"]
+#	$_GET['${1:variable}']${2}
+#endsnippet
+#snippet $_ "POST['...']"
+#	$_POST['${1:variable}']${2}
+#endsnippet
+#snippet $_ "REQUEST['...']"
+#	$_REQUEST['${1:variable}']${2}
+#endsnippet
+#snippet $_ "SERVER['...']"
+#	$_SERVER['${1:variable}']${2}
+#endsnippet
+#snippet $_ "SESSION['...']"
+#	$_SESSION['${1:variable}']${2}
+#endsnippet
+
+# Start Docblock
+snippet /*
+/**
+ * ${1}
+ **/
+endsnippet
+# Class - post doc
+snippet doc_cp
+	/**
+	 * ${1:undocumented class}
+	 *
+	 * @package ${2:default}
+	 * @author ${3:`g:snips_author`}
+	**/${4}
+endsnippet
+# Class Variable - post doc
+snippet doc_vp
+	/**
+	 * ${1:undocumented class variable}
+	 *
+	 * @var ${2:string}
+	 **/${3}
+endsnippet
+# Class Variable
+snippet doc_v
+/**
+ * ${3:undocumented class variable}
+ *
+ * @var ${4:string}
+ **/
+${1:var} $${2};${5}
+endsnippet
+# Class
+snippet doc_c
+	/**
+	 * ${3:undocumented class}
+	 *
+	 * @packaged ${4:default}
+	 * @author ${5:`g:snips_author`}
+	 **/
+	${1:}class ${2:}
+	{${6}
+	} // END $1class $2
+endsnippet
+# Constant Definition - post doc
+snippet doc_dp
+	/**
+	 * ${1:undocumented constant}
+	 **/${2}
+endsnippet
+# Constant Definition
+snippet doc_d
+	/**
+	 * ${3:undocumented constant}
+	 **/
+	define(${1}, ${2});${4}
+endsnippet
+# Function - post doc
+snippet doc_fp
+	/**
+	 * ${1:undocumented function}
+	 *
+	 * @return ${2:void}
+	 * @author ${3:`g:snips_author`}
+	 **/${4}
+endsnippet
+# Function signature
+snippet doc_s
+	/**
+	 * ${4:undocumented function}
+	 *
+	 * @return ${5:void}
+	 * @author ${6:`g:snips_author`}
+	 **/
+	${1}function ${2}(${3});${7}
+endsnippet
+# Function
+snippet doc_f "doc_f" !
+/**
+ * $2
+ *
+ * @access  $1
+ * @param   $3
+ * @return  ${4:void}
+ **/
+${1:public }function ${2:someFunc}(${3})
+{
+    ${6}
+}
+endsnippet
+# Header
+snippet doc_h
+	/**
+	 * ${1}
+	 *
+	 * @author ${2:`g:snips_author`}
+	 * @version ${3:$Id$}
+	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
+	 * @package ${5:default}
+	 **/
+	
+	/**
+	 * Define DocBlock
+	 *//
+endsnippet
+# Interface
+snippet doc_i
+	/**
+	 * ${2:undocumented class}
+	 *
+	 * @package ${3:default}
+	 * @author ${4:`g:snips_author`}
+	 **/
+	interface ${1:}
+	{${5}
+	} // END interface $1
+endsnippet
 # :vim:ft=snippets:
