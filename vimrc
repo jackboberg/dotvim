@@ -85,6 +85,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 
 
+"let g:syntastic_check_on_open=1
+"let g:syntastic_enable_balloons = 1
+let g:syntastic_auto_loc_list=1
+
 " --------------------------------------------------------------------
 " map keys for personal taste
 map <leader>w :NERDTreeToggle<CR>
@@ -96,10 +100,14 @@ nmap <leader>md :%! markdown --html4tags <CR>
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_us
 
+" Toggle invisibles
+nmap <silent> <leader>i :set list!<CR>
+
 "let g:syntastic_enable_balloons = 1
 
-" Load .vimrc in split window
-map <leader>v :vs $MYVIMRC<CR><C-W>_
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :vs $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Reselect visual block after indent/outdent
 "vnoremap < <gv
@@ -155,9 +163,6 @@ if has("autocmd")
 
   " Show Git diff in window split when commiting
   autocmd FileType gitcommit DiffGitCached
-
-  " re-source .vimrc when saved
-  autocmd BufWritePost .vimrc so ~/.vimrc
 
   autocmd BufEnter * setlocal cursorline
   autocmd BufEnter * setlocal colorcolumn=73
