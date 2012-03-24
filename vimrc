@@ -85,10 +85,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "MyUltiSnips"]
 
 
-"let g:syntastic_check_on_open=1
-"let g:syntastic_enable_balloons = 1
-let g:syntastic_auto_loc_list=1
-
 " --------------------------------------------------------------------
 " map keys for personal taste
 map <leader>w :NERDTreeToggle<CR>
